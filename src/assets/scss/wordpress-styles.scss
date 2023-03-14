@@ -1,0 +1,105 @@
+@import '../../../node_modules/@wordpress/base-styles/colors';
+@import '../../../node_modules/@wordpress/base-styles/variables';
+@import '../../../node_modules/@wordpress/base-styles/mixins';
+@import '../../../node_modules/@wordpress/base-styles/breakpoints';
+@import '../../../node_modules/@wordpress/base-styles/animations';
+@import '../../../node_modules/@wordpress/base-styles/z-index';
+@import '../../../node_modules/@wordpress/base-styles/default-custom-properties';
+
+/*** Custom WP styles
+
+- Cover Block
+- Buttons
+
+***/
+.blocks-gallery-item figure .inline-gatsby-image-wrapper {
+  height: 100%;
+}
+
+.aligncenter {
+  display: block;
+  margin: 0 auto 24px;
+}
+.wp-block-jetpack-tiled-gallery {
+  margin: 0 auto 1.5em;
+}
+.tiled-gallery__row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+}
+.tiled-gallery__col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+.tiled-gallery__item,
+.wp-block-jetpack-tiled-gallery.is-style-rectangular .tiled-gallery__item {
+  display: flex;
+}
+
+.tiled-gallery__item {
+  flex-grow: 1;
+  justify-content: center;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+}
+
+.tiled-gallery__item>img {
+  display: block;
+  height: auto;
+  margin: 0;
+  max-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  padding: 0.2em;
+  width: 100%;
+}
+
+.wp-block-image.size-large {
+  .inline-gatsby-image-wrapper.gatsby-image-wrapper {
+    margin: 0 auto !important;
+    display: block !important;
+  }
+}
+
+/**
+  - Cover Block
+  ***************/
+.wp-block-cover__image-background {
+  position: absolute !important;
+  max-height: 275px !important;
+}
+.wp-block-cover__inner-container {
+  h1 {
+    color: #f5f5f5 !important;
+  }
+}
+
+/**
+  - Buttons
+  ***************/
+
+.wp-block-button__link.wp-element-button {
+  background-color: #F4C85A;
+  color: #000;
+  margin-bottom: 1.318em;
+  margin-top: 1.618em;
+  width: 100%;
+}
+.wp-block-button__link.wp-element-button:hover {
+  background-color: #000;
+  color: #f5f5f5;
+}
+
+
+
+
