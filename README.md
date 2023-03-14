@@ -15,6 +15,7 @@ Use Yarn rather than NPM
 
 yarn run start (for dev)
 yarn run build (builds production)
+yarn run clean (cleans cache)
 
 
 Your site is now running at `http://localhost:8000`!
