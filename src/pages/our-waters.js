@@ -11,7 +11,7 @@ import ServiceThree from "@/components/service-three";
 import MenuContextProvider from "@/context/menu-context";
 import SearchContextProvider from "@/context/search-context";
 import HeaderOne from "@/components/header-one";
-import ContactUs from "@/components/contact-test";
+import ContactUs from "@/components/contact-intelicontact";
 
 const ServicePage = () => {
   return (

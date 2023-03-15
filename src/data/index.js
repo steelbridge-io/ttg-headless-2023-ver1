@@ -71,14 +71,6 @@ export const NavLinks = [
         name: "Trinity River",
         url: "/trinity-river",
       },
-      {
-        name: "Smith River",
-        url: "/smith-river",
-      },
-      {
-        name: "Lake Oroville",
-        url: "/lake-oroville",
-      },
     ],
   },
   {
@@ -125,6 +117,10 @@ export const NavLinks = [
     name: "Contact",
     url: "/contact-the-trinity-guide",
   },
+  {
+    name: "tel: 530-338-5734",
+    url: "tel:15303385734",
+  },
 ];
 
 import sliderOne01 from "@/images/slider/1_1.jpg";
@@ -133,20 +129,20 @@ import sliderOne02 from "@/images/slider/1_2.jpg";
 export const SliderOneData = [
   {
     image: sliderOne01,
-    subTitle: "N. CALIFORNIA",
-    title: "THE TRINITY GUIDE \n GUIDED FLY FISHING",
+    subTitle: "",
+    title: "BOOK NOW!",
     button: {
       label: "DISCOVER MORE",
-      url: "/about",
+      url: "/trinity-river-fly-fishing-guide/",
     },
   },
   {
     image: sliderOne02,
-    subTitle: "GUIDED FLY FISHING",
-    title: "EXPERIENCE FIRST \n GUIDED FLY FISHING",
+    subTitle: "",
+    title: "BOOK NOW!",
     button: {
       label: "DISCOVER MORE",
-      url: "/about",
+      url: "/trinity-river-fly-fishing-guide/",
     },
   },
 ];

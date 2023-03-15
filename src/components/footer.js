@@ -52,6 +52,7 @@ const Footer = () => {
             <aside className="widget disclaimer_widget">
               <h3 className="widget_title">Permit &amp; Rights</h3>
               <p><a href="/civil-rights-statement-and-permit-information/" title="Civil Rights And Permit Information">Civil Rights &amp; Permit</a></p>
+              <p><a href="/shasta-trinity-national-forest-special-use-permit/" title="Shasta - Trinity National Forest Special Use Permit">Shasta - Trinity National Forest Special Use Permit</a></p>
             </aside>
           </div>
         </div>

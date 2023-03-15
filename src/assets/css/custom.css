@@ -2,6 +2,7 @@
 Custom CSS
     - Typography
     - Categories
+    - Contact
     - Report
     - How to book
  */
@@ -37,6 +38,17 @@ background-color: #331D0B;
 }
 
 /**************
+    - Contact
+    ***********/
+#contact-intelicontact.container {
+    margin: 0 auto;
+    padding-bottom: 1.618em;
+}
+#contact-intelicontact iframe {
+    width: 100%;
+}
+
+/**************
     - Report
     ***********/
 .report-wrapper,
@@ -56,11 +68,11 @@ background-color: #331D0B;
     padding-top: 1.618em;
 }
 .lets-go-fishing .gatsby-image-wrapper {
-    height: 782.5px;
+    height: 772.5px;
     position: relative;
 }
 .lets-go-fishing .gatsby-image-wrapper img {
-    height: 782.5px;
+    height: 772.5px;
 }
 .lets-go-fishing .gatsby-image-wrapper:before {
     content: "";

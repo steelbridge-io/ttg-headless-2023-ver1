@@ -141,6 +141,7 @@ exports.createPages = ({ graphql, actions }) => {
                   date(formatString: "MMM Do YYYY")
                   excerpt
                   slug
+                  content
                   featuredImage {
                     node {
                       altText

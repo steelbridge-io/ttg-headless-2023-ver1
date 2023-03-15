@@ -3,7 +3,7 @@ import Footer from "@/components/footer";
 import Layout from "@/components/layout";
 import ContactInfos from "@/components/contact-infos";
 import GoogleMap from "@/components/google-map";
-import ContactForm from "@/components/contact-test";
+import ContactForm from "@/components/contact-intelicontact";
 import PageBanner from "@/components/page-banner";
 import SearchContextProvider from "@/context/search-context";
 import MenuContextProvider from "@/context/menu-context";
