@@ -2,7 +2,7 @@ process.traceDeprecation = true;
 module.exports = {
   siteMetadata: {
     title: `The Trinity Guide Co.`,
-    description: `Guided fly fishing on the Lower Sacramento River, Trinity River, for rainbow trout and steelhead.`,
+    description: `Guided fly fishing on the Lower Sacramento River, Trinity River, for rainbow trout, and steelhead.`,
     author: `Alex Ross`,
   },
   plugins: [
