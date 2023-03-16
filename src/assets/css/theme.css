@@ -1928,14 +1928,14 @@ License URI:
 .pageBanner {
   position: relative;
   min-height: 465px;
-  background: url(../images/bg/8-ross.jpg) no-repeat center center / cover;
+  background: url(../images/bg/resting-steelhead.webp) no-repeat center center / cover;
   padding-top: 224px;
   position: relative;
   z-index: 1;
 }
 .pageBanner:after {
   content: "";
-  background: rgba(0,0,0,0.2);
+  background: rgba(0,0,0,0.4);
   position: absolute;
   z-index: 2;
   display: block;

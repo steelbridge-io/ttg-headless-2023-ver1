@@ -718,13 +718,13 @@ export const ClientCarouselData = {
   ],
 };
 
-import aboutOne01 from "@/images/about/about-1.jpg";
-import aboutOne02 from "@/images/about/about-2.jpg";
+import aboutOne01 from "@/images/about/about-1.webp";
+import aboutOne02 from "@/images/about/about-2.webp";
 
 export const AboutOneData = {
   sectionContent: {
-    title: "get a better result from your fly fishing investment",
-    subTitle: "get to know us",
+    title: "Great N. California fishing adventures for all anglers and guests. Beginner to expert.",
+    subTitle: "Hire us for a day or more of guided fishing",
   },
   gallery: [aboutOne01, aboutOne02],
   counter: {
