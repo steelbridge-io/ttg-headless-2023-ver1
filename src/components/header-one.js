@@ -4,6 +4,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { SearchContext } from "@/context/search-context";
 import { MenuContext } from "@/context/menu-context";
 import { Link } from "gatsby";
+import Helmet from "react-helmet";
 
 const HeaderOne = () => {
   const [sticky, setSticky] = useState(false);

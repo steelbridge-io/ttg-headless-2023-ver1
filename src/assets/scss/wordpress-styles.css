@@ -113,6 +113,10 @@
   height: 100%;
 }
 
+.wp-block-cover__background.has-background-dim-0.has-background-dim::before {
+  opacity: 0 !important;
+}
+
 .blocks-gallery-item figure .inline-gatsby-image-wrapper {
   height: 100%;
 }

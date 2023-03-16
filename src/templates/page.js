@@ -12,7 +12,7 @@ import "@wordpress/block-library/build-style/style.css";
 import "@wordpress/block-library/build-style/theme.css";
 import {CategoriesList} from "../components/categories";
 import {graphql} from "gatsby";
-
+import Helmet from "react-helmet";
 
 const pageConst = ({pageContext, data: { wpPage } }) => (
 	<>

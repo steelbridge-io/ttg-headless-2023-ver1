@@ -21,7 +21,7 @@ const TrinityGuideCatPage = ({pageContext, data}) => (
 				<HeaderOne />
 				<PageBanner title={pageContext.category} name={pageContext.category} />
 				<section className="commonSection">
-					<div className="page-wrapper">
+					<div className="page-wrapper category-wrapper">
 					
 					<div className="post-list-wrapper">
 						<ul>
@@ -54,10 +54,17 @@ export const categoryPageQuery = graphql` query GET_POSTS_BY_CATEGORY($category:
   allWpPost(filter: {categories: {nodes: {elemMatch: {name: {eq: $category}}}}}) {
     edges {
       node {
+      featuredImage {
+          node {
+            sourceUrl
+            altText
+          }
+        }
         id
         title
         date(formatString: "MMM Do YYYY")
         excerpt
+        content
         slug
       }
     }

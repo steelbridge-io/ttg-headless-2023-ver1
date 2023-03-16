@@ -4,6 +4,7 @@ Custom CSS
     - Categories
     - Contact
     - Page CTA
+    - Images
     - Report
     - How to book
  */
@@ -69,6 +70,27 @@ background-color: #331D0B;
     color: #331D0B;
     background-color: #F4C85A;
     border-color: #331D0B;
+}
+
+/**************
+    - Images
+    ***********/
+
+.content-img-fw {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: 400px !important;
+    width: 100% !important;
+}
+.content-img-fw img {
+    width: 100% !important;
+    height: 400px !important;
+}
+.content-img-fw .inline-gatsby-image-wrapper.gatsby-image-wrapper {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    height: 400px !important;
+    width: 100% !important;
 }
 
 /**************
