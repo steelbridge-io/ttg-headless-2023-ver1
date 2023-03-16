@@ -3,6 +3,7 @@ Custom CSS
     - Typography
     - Categories
     - Contact
+    - Page CTA
     - Report
     - How to book
  */
@@ -46,6 +47,28 @@ background-color: #331D0B;
 }
 #contact-intelicontact iframe {
     width: 100%;
+}
+
+/**************
+    - Page CTA
+    ***********/
+.ttg-page-cta-cont {
+    margin: 1.618em auto;
+}
+.ttg-page-cta-cont .btn {
+    border-radius: 5px;
+    padding: 1em 2em;
+}
+.ttg-page-cta-cont .card {
+    border: none;
+}
+.ttg-page-cta-cont .card .btn {
+    width: 100%;
+}
+.btn-ttg {
+    color: #331D0B;
+    background-color: #F4C85A;
+    border-color: #331D0B;
 }
 
 /**************
