@@ -122,9 +122,9 @@ export const NavLinks = [
     url: "tel:15303385734",
   },
 ];
-
-import sliderOne01 from "@/images/slider/1_1.jpg";
-import sliderOne02 from "@/images/slider/1_2.jpg";
+// Note: path to images is /assests/images
+import sliderOne01 from "@/images/slider/IMG_7414.jpg.webp";
+import sliderOne02 from "@/images/slider/tom-casting.jpg.webp";
 
 export const SliderOneData = [
   {
@@ -423,10 +423,10 @@ export const BlogComments = [
   },
 ];
 
-import portfolio01 from "@/images/portfolio/1.jpg";
-import portfolio02 from "@/images/portfolio/whiskeytown.jpg";
-import portfolio03 from "@/images/portfolio/3.jpg";
-import portfolio04 from "@/images/portfolio/shasta-lake.jpg";
+import portfolio01 from "@/images/portfolio/1.webp";
+import portfolio02 from "@/images/portfolio/whiskeytown.webp";
+import portfolio03 from "@/images/portfolio/trinity-steelhead.webp";
+import portfolio04 from "@/images/portfolio/shasta-lake.webp";
 import portfolio05 from "@/images/portfolio/smith-river.jpg";
 import portfolio06 from "@/images/portfolio/lake-oroville.jpg";
 
@@ -671,7 +671,7 @@ export const FunfactData = [
   },
 ];
 
-import trustClient01 from "@/images/home_1/4.jpg";
+import trustClient01 from "@/images/home_1/4.webp";
 
 export const TrustClientData = {
   image: trustClient01,
@@ -733,9 +733,9 @@ export const AboutOneData = {
   },
 };
 
-import team01 from "@/images/team/tom-philips-team.jpg";
-import team02 from "@/images/team/alex-ross-team.jpg";
-import team03 from "@/images/team/nathan-kyncy-team.jpg";
+import team01 from "@/images/team/tom-philips-team.webp";
+import team02 from "@/images/team/alex-ross-team.webp";
+import team03 from "@/images/team/nathan-kyncy-team.webp";
 /*import team04 from "@/images/team/4.jpg";
 import team05 from "@/images/team/5.jpg";*/
 
@@ -1078,7 +1078,7 @@ export const VideoTwoData = {
 };
 
 import aboutTwo01 from "@/images/home_1/2.jpg";
-import aboutTwo02 from "@/images/home_1/1.jpg";
+import aboutTwo02 from "@/images/home_1/1.webp";
 
 export const AboutTwoData = {
   sectionContent: {
