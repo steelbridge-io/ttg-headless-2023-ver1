@@ -113,14 +113,17 @@ const Layout = ({ PageTitle, PageDescription, children }) => {
             }
         }
     `);
-  
+
+  const shouldRenderHelmet = false;
   return (
    <SEOContext.Provider value={{ global: seo }}>
     <Fragment>
+      {shouldRenderHelmet && (
       <Helmet>
         <title>{ `${ PageTitle }` }</title>
         <meta name='description' content={`${PageDescription}`} />
       </Helmet>
+      )}
       <div id="wrapper">{children}</div>
       {true === searchStatus ? <SearchPopup /> : null}
       {true === menuStatus ? <PopupMenu /> : null}
