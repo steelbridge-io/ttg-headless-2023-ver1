@@ -15,7 +15,7 @@ import "@wordpress/block-library/build-style/theme.css";
 const archiveConst = ({pageContext}) => (
 				<MenuContextProvider>
 					<SearchContextProvider>
-						<Layout PageTitle={pageContext.title}>
+						<Layout PageTitle={pageContext.title} PageDescription={'The Trinity Guide Co. - Archive'}>
 							<HeaderOne />
 							<PageBanner title={pageContext.title} name={pageContext.title} />
 							<section className="commonSection">

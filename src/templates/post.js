@@ -26,7 +26,7 @@ const postConst = ({pageContext, data: { wpPost }}) => (
 		<Seo post={wpPost} />
 		<MenuContextProvider>
 			<SearchContextProvider>
-				<Layout PageTitle={pageContext.title}>
+				<Layout PageTitle={pageContext.title} template="templateWP">
 					<HeaderOne />
 					<PageBanner title={pageContext.title} name={pageContext.title} />
 					<section className="commonSection">

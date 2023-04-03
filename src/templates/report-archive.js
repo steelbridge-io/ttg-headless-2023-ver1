@@ -29,7 +29,7 @@ const reportArchiveConst = ({pageContext, data: { wpReport }}) => (
 		<Seo post={wpReport} />
 		<MenuContextProvider>
 			<SearchContextProvider>
-				<Layout PageTitle={pageContext.title}>
+				<Layout PageTitle={pageContext.title} PageDescription={'The Trinity Guide Co. - Report Archive'} template="templateWP">
 					<HeaderOne />
 					<PageBanner title={pageContext.title} name={pageContext.title} />
 					<section className="commonSection">

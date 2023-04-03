@@ -37,7 +37,7 @@ const FeaturedImage = styled.img`
 const postConst = ({pageContext}) => (
 	<MenuContextProvider>
 		<SearchContextProvider>
-	<Layout PageTitle={pageContext.title}>
+	<Layout PageTitle={pageContext.title} PageDescription={'The Trinity Guide Co. - News'}>
 		<HeaderOne />
 		<PageBanner title={pageContext.title} name={pageContext.title} />
 		<section className="commonSection">

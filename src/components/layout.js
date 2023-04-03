@@ -7,6 +7,7 @@ import { MenuContext } from "@/context/menu-context";
 import SearchPopup from "@/components/search-popup";
 import PopupMenu from "@/components/popup-menu";
 import { Link as ScrollLink } from "react-scroll";
+import { useRouteMatch } from "react-router-dom";
 
 import "typeface-oswald";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -18,7 +19,7 @@ import "@/css/theme.css";
 import "@/css/custom.css";
 import "@/css/responsive.css";
 
-const Layout = ({ PageTitle, PageDescription, children }) => {
+const Layout = ({ template, PageTitle, PageDescription, children }) => {
   const { searchStatus } = useContext(SearchContext);
   const { menuStatus } = useContext(MenuContext);
   const [scrollTop, setScrollTop] = useState(false);
@@ -37,93 +38,17 @@ const Layout = ({ PageTitle, PageDescription, children }) => {
       window.removeEventListener("scroll", handleScrollTop);
     };
   }, [scrollTop]);
-  
-  const {
-    wp: { seo },
-  } = useStaticQuery(graphql`
-        query SiteInfoQuery {
-            wp {
-                seo {
-                    contentTypes {
-                        post {
-                            title
-                            schemaType
-                            metaRobotsNoindex
-                            metaDesc
-                        }
-                        page {
-                            metaDesc
-                            metaRobotsNoindex
-                            schemaType
-                            title
-                        }
-                    }
-                    webmaster {
-                        googleVerify
-                        yandexVerify
-                        msVerify
-                        baiduVerify
-                    }
-                    schema {
-                        companyName
-                        personName
-                        companyOrPerson
-                        wordpressSiteName
-                        siteUrl
-                        siteName
-                        inLanguage
-                        logo {
-                            sourceUrl
-                            mediaItemUrl
-                            altText
-                        }
-                    }
-                    social {
-                        facebook {
-                            url
-                            defaultImage {
-                                sourceUrl
-                                mediaItemUrl
-                            }
-                        }
-                        instagram {
-                            url
-                        }
-                        linkedIn {
-                            url
-                        }
-                        mySpace {
-                            url
-                        }
-                        pinterest {
-                            url
-                            metaTag
-                        }
-                        twitter {
-                            username
-                        }
-                        wikipedia {
-                            url
-                        }
-                        youTube {
-                            url
-                        }
-                    }
-                }
-            }
-        }
-    `);
 
-  const shouldRenderHelmet = false;
+  const shouldRenderHelmet = template !== "templateWP";
   return (
    <SEOContext.Provider value={{ global: seo }}>
     <Fragment>
       {shouldRenderHelmet && (
       <Helmet>
         <title>{ `${ PageTitle }` }</title>
-        <meta name='description' content={`${PageDescription}`} />
+        <meta name='description' content={ `${ PageDescription }`} />
       </Helmet>
-      )}
+          )}
       <div id="wrapper">{children}</div>
       {true === searchStatus ? <SearchPopup /> : null}
       {true === menuStatus ? <PopupMenu /> : null}
@@ -142,6 +67,82 @@ const Layout = ({ PageTitle, PageDescription, children }) => {
     </Fragment>
    </SEOContext.Provider>
   );
+
+  const {
+  wp: { seo },
+  } = useStaticQuery(graphql`
+      query SiteInfoQuery {
+          wp {
+              seo {
+                  contentTypes {
+                      post {
+                          title
+                          schemaType
+                          metaRobotsNoindex
+                          metaDesc
+                      }
+                      page {
+                          metaDesc
+                          metaRobotsNoindex
+                          schemaType
+                          title
+                      }
+                  }
+                  webmaster {
+                      googleVerify
+                      yandexVerify
+                      msVerify
+                      baiduVerify
+                  }
+                  schema {
+                      companyName
+                      personName
+                      companyOrPerson
+                      wordpressSiteName
+                      siteUrl
+                      siteName
+                      inLanguage
+                      logo {
+                          sourceUrl
+                          mediaItemUrl
+                          altText
+                      }
+                  }
+                  social {
+                      facebook {
+                          url
+                          defaultImage {
+                              sourceUrl
+                              mediaItemUrl
+                          }
+                      }
+                      instagram {
+                          url
+                      }
+                      linkedIn {
+                          url
+                      }
+                      mySpace {
+                          url
+                      }
+                      pinterest {
+                          url
+                          metaTag
+                      }
+                      twitter {
+                          username
+                      }
+                      wikipedia {
+                          url
+                      }
+                      youTube {
+                          url
+                      }
+                  }
+              }
+          }
+      }
+  `);
 };
 
 export default Layout;

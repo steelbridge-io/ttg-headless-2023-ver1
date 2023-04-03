@@ -1,7 +1,7 @@
 import React from "react";
 import Seo from 'gatsby-plugin-wpgraphql-seo';
 import Footer from "@/components/footer";
-import Layoutpage from "@/components/layout";
+import Layout from "@/components/layout";
 import PageBanner from "@/components/page-banner";
 import MenuContextProvider from "@/context/menu-context";
 import SearchContextProvider from "@/context/search-context";
@@ -13,12 +13,12 @@ import "@wordpress/block-library/build-style/theme.css";
 import {CategoriesList} from "../components/categories";
 import {graphql} from "gatsby";
 
-const pageConst = ({pageContext, data: { wpPage } }) => (
+const pageConst = ({ pageContext, data: { wpPage } }) => (
 	<>
 		<Seo post={wpPage} />
 				<MenuContextProvider>
 					<SearchContextProvider>
-						<Layoutpage PageTitle={pageContext.title}>
+						<Layout PageTitle={pageContext.title} template="templateWP" >
 							<HeaderOne />
 							<PageBanner title={pageContext.title} name={pageContext.title} />
 							<section className="commonSection">
@@ -32,7 +32,7 @@ const pageConst = ({pageContext, data: { wpPage } }) => (
 								<CategoriesList />
 							</section>
 							<Footer />
-						</Layoutpage>
+						</Layout>
 					</SearchContextProvider>
 				</MenuContextProvider>
 	</>
