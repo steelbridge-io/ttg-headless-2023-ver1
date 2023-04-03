@@ -39,37 +39,9 @@ const Layout = ({ template, PageTitle, PageDescription, children }) => {
     };
   }, [scrollTop]);
 
-  const shouldRenderHelmet = template !== "templateWP";
-  return (
-   <SEOContext.Provider value={{ global: seo }}>
-    <Fragment>
-      {shouldRenderHelmet && (
-      <Helmet>
-        <title>{ `${ PageTitle }` }</title>
-        <meta name='description' content={ `${ PageDescription }`} />
-      </Helmet>
-          )}
-      <div id="wrapper">{children}</div>
-      {true === searchStatus ? <SearchPopup /> : null}
-      {true === menuStatus ? <PopupMenu /> : null}
-
-      {scrollTop === true ? (
-        <ScrollLink
-          to="wrapper"
-          smooth={true}
-          duration={500}
-          id="backToTop"
-          className="scroll-to-top showit"
-        >
-          <i className="fa fa-angle-double-up"></i>
-        </ScrollLink>
-      ) : null}
-    </Fragment>
-   </SEOContext.Provider>
-  );
 
   const {
-  wp: { seo },
+    wp: { seo },
   } = useStaticQuery(graphql`
       query SiteInfoQuery {
           wp {
@@ -143,6 +115,35 @@ const Layout = ({ template, PageTitle, PageDescription, children }) => {
           }
       }
   `);
+
+  const shouldRenderHelmet = template !== "templateWP";
+  return (
+   <SEOContext.Provider value={{ global: seo }}>
+    <Fragment>
+      {shouldRenderHelmet && (
+      <Helmet>
+        <title>{ `${ PageTitle }` }</title>
+        <meta name='description' content={ `${ PageDescription }`} />
+      </Helmet>
+          )}
+      <div id="wrapper">{children}</div>
+      {true === searchStatus ? <SearchPopup /> : null}
+      {true === menuStatus ? <PopupMenu /> : null}
+
+      {scrollTop === true ? (
+        <ScrollLink
+          to="wrapper"
+          smooth={true}
+          duration={500}
+          id="backToTop"
+          className="scroll-to-top showit"
+        >
+          <i className="fa fa-angle-double-up"></i>
+        </ScrollLink>
+      ) : null}
+    </Fragment>
+   </SEOContext.Provider>
+  );
 };
 
 export default Layout;
